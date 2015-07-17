@@ -8,5 +8,7 @@ Copy the Expression to Position of all Layers
 
 ## Expression for Position of Layers
 percentage = thisComp.layer("Control Stabilisation").effect("Percent of Stabilization")("Slider");
+
 centerPosition = thisComp.layer("Control Stabilisation").transform.position;
+
 (centerPosition * (100-percentage) + position*(percentage))/100;
