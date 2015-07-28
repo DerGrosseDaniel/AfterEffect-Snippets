@@ -7,10 +7,10 @@ Moves layer in 'direction' by 'distance'.
 - Slider Effect named "distance"
 
 ##Expression for the position
-'direction = effect("direction")("Slider")*(2*Math.PI)/360
-distance = effect("distance")("Slider")
+  direction = effect("direction")("Slider")*(2*Math.PI)/360
+  distance = effect("distance")("Slider")
 
-difx = Math.sin(90-direction)*distance
-dify = Math.sin(direction)*distance
+  difx = Math.sin(90-direction)*distance
+  dify = Math.sin(direction)*distance
 
-transform.position+[difx,dify]'
+  transform.position+[difx,dify]
