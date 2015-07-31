@@ -1,5 +1,1 @@
-for (var i = 1; i <= app.project.numItems; i++) {
-
-        //do something with app.project.item(i)
-
-}
+﻿{    app.beginUndoGroup("do something with every item in project");    for (var i = 1; i <= app.project.numItems; i++) {            //do something with app.project.item(i)    }    app.endUndoGroup(); }
