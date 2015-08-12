@@ -4,7 +4,9 @@ This expression moves a point on the line between camera and current position to
 
 This moves all points to the plane through the new y, but keeps the position of the point visually the same for the camera.
 
-    Pf=transform.position //old Position
+Copy this expression to position of object.
+
+    Pf = transform.position //old Position
     Pk = thisComp.layer("3D Tracker Camera").transform.position //cameraposition
 
     yh = -800 //new y-value
