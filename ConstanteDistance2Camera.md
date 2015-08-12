@@ -11,4 +11,5 @@ Copy this expression to position of object.
 
 	distance = 500 //distance to camera
 
-	X = Pk + distance*(Pf-Pk)/Math.sqrt( (Pf[0]-Pk[0])*(Pf[0]-Pk[0]) + (Pf[1]-Pk[1])*(Pf[1]-Pk[1]) + (Pf[2]-Pk[2])*(Pf[2]-Pk[2]) )
+	//X = Pk + distance*(Pf-Pk)/Math.sqrt( (Pf[0]-Pk[0])*(Pf[0]-Pk[0]) + (Pf[1]-Pk[1])*(Pf[1]-Pk[1]) + (Pf[2]-Pk[2])*(Pf[2]-Pk[2]) )
+	X = Pk + distance*(Pf-Pk)/length(Pf,Pk)
