@@ -1,1 +1,1 @@
-﻿{    app.beginUndoGroup("Do something with every selected layer");    var selectedLayers = app.project.activeItem.selectedLayers;    for(i = 0;i < selectedLayers.length;i++){        //do something with selectedLayers[i]    }    app.endUndoGroup(); }
+﻿{    app.beginUndoGroup("Do something with every selected layer");    var selectedLayers = app.project.activeItem.selectedLayers;    for(i = 1;i <= selectedLayers.length;i++){        //do something with selectedLayers[i]    }    app.endUndoGroup(); }
