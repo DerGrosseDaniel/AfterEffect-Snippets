@@ -11,7 +11,7 @@ nearestFrame = 0 //value to store frame with best fitting value
 minDiviationFound = 100000 //here we save the value of the frame which is nearest to out target
 
 for (i = searchRangeIn; i <= SearchRangeOut; i+=1/100) { 
-	diviation = Math.abs(thisComp.layer("Tracking").transform.xPosition.valueAtTime(i) - effect("SollPosition")("Slider").valueAtTime(time));
+	diviation = Math.abs(valueToStabilize.valueAtTime(i) - valueToAchieve.valueAtTime(time));
 	if( diviation < minDiviationFound ) {
 		nearestFrame = i
 		minDiviationFound = diviation
