@@ -1,0 +1,21 @@
+//This Script is used to take a clip with a moving object which doesn't move smooth temporally. So you track it or otherwise determine the valueToStabilze and generate the Value to achieve and let the script calculate the correct frame to display for a smooth motion
+
+valueToStabilize = thisComp.layer("Tracking").transform.xPosition
+valueToAchieve = effect("SollPosition")("Slider")
+
+//clip should have the same inpoint as comp
+searchRangeIn = 7.56 //use a seperate slider with time expression to get this value
+SearchRangeOut = 25.28
+
+nearestFrame = 0 //value to store frame with best fitting value
+minDiviationFound = 100000 //here we save the value of the frame which is nearest to out target
+
+for (i = searchRangeIn; i <= SearchRangeOut; i+=1/100) { 
+	diviation = Math.abs(thisComp.layer("Tracking").transform.xPosition.valueAtTime(i) - effect("SollPosition")("Slider").valueAtTime(time));
+	if( diviation < minDiviationFound ) {
+		nearestFrame = i
+		minDiviationFound = diviation
+	}
+}
+
+nearestFrame
