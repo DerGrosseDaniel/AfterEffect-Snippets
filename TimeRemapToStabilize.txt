@@ -1,0 +1,13 @@
+distance = 300; //max distance
+closestFrame = 0;//searching for closest frame
+for (i = 28.56; i <= 33.08; i+=1/100) { //28.56 is starttime and 33.08 is the endtime of range we are searching in
+
+//VReal is actual value of clip
+//VIdeal is Slider/Variable with wanted value
+	if( Math.abs(effect("VReal")("Slider"). valueAtTime(i)-effect("VIdeal")("Slider"). valueAtTime(time)) < distance ) {
+		closestFrame = i - 28.56 //calculates frame
+		distance = Math.abs(effect("VReal")("Slider"). valueAtTime(i)-effect("VIdeal")("Slider"). valueAtTime(time)) //sets new shortest distance
+	}
+}
+
+closestFrame
