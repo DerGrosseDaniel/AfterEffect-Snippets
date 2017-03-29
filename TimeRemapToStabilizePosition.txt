@@ -10,7 +10,7 @@ SearchRangeOut = 25.28
 nearestFrame = 0 //value to store frame with best fitting value
 minDiviationFound = 100000 //here we save the value of the frame which is nearest to out target
 
-for (i = searchRangeIn; i <= SearchRangeOut; i+=1/100) { 
+for (i = searchRangeIn; i <= SearchRangeOut; i+=1/25) { //1/25 is duration of a frame, if you want subframe precision, choose a smaller value
 	diviation = Math.abs(valueToStabilize.valueAtTime(i) - valueToAchieve.valueAtTime(time));
 	if( diviation < minDiviationFound ) {
 		nearestFrame = i
