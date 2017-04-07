@@ -9,5 +9,7 @@ ideas wich would be usefull:
 - 3D Camera Tracker -> DepthMap -> Blur in Abhänigkeit der Map -> künstlicher Fokus setzen
 - rumspielen mit valueAtTime()
 - Settings Script (Script witch lists all Expression Control Effects from Settings Comp and makes applying easy)
-
-There will be no list with file discriptions. You have to read the file names to get the purpose and then open it to get more infos in the comments.
+- move 3D-layer and scale it automatically so it appears as the same size for the camera
+ (load camera position, load object position, set new scale, movewitch vector between points proportionally)
+ 
+ There will be no list with file discriptions. You have to read the file names to get the purpose and then open it to get more infos in the comments.
